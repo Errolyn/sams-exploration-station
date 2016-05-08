@@ -1,0 +1,40 @@
+#header {
+    background-color: #cbc7d4;
+    margin-top: -8px;
+    margin-left: -8px;
+    margin-right: -8px;
+    height: 140px;
+   
+}
+
+#title {
+    text-align: center;
+}
+
+
+
+.left {
+    
+    height: 640px;
+    float: left;
+    border: 4px solid #c1bcce;
+    background-color: #cbc7d4;
+    margin-top: 72px;
+}
+
+.right {
+    
+    height: 640px;
+    float: right;
+    border: 4px solid #c1bcce;
+    background-color: #cbc7d4;
+    margin-top: 72px;
+}
+
+#footer {
+    clear: both;
+    border: 4px solid #c1bcce;
+    background-color: #cbc7d4;
+    height: 140px;
+    
+}
