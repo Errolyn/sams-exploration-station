@@ -68,10 +68,7 @@ body {
 }
 
 #footer {
-    clear: both;
     position: relative;
-    padding-top: 40px;  
-    background-color: #cbc7d4;
     text-align: center;
     text-decoration: none;      
 }
