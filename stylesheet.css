@@ -1,26 +1,59 @@
 * {
-  margin: 0;  
+  margin: 0;
+  font-family: "Verduna"  
 }
 
 
 #header {
-    background-color: #cbc7d4;
-    height: 110px;
+    background-image: url("siteResources/purple-matrix-wallpapers-backgrounds-for-powerpoint.jpg");
+    background-color: #6B238E;
+    height: 160px;
     text-align: center;
-    padding-top: 30px;   
+    color: white;
+    float: top;
+    box-shadow: 11px 9px 37px -8px rgba(0,0,0,0.75);   
 }
 
+#email {
+    font-size: 18px;
+    padding-top: -20px;
+    color: white;
+}
 
 #title {
-    font-size: 35px;
+    font-size: 45px;
+    font-family: "Arial";
+    padding-top: 40px;
 }
 
 
-#links {
+#links { 
+    background-color: #6B238E;
+    border-radius: 3px;
     text-decoration: none;
-    text-align: center;
+    color: white;
+    padding: 4px;
+    font-family: "Arial";
+    box-shadow: 11px 9px 37px -8px rgba(0,0,0,0.75);
 }
 
+#navBar {
+    text-align: center;
+    color: #6B238E;
+    font-size: 20px;
+    padding: 5px;
+}
+
+#body {
+    text-align: justify;
+    padding-right: 90px;
+    padding-left: 90px;
+    padding-bottom: 20px;
+}
+
+p {
+    padding-top: 20px;
+}
 
 h4 {
     text-decoration: underline;
@@ -30,35 +63,14 @@ h4 {
 
 
 body {
-    background-color: #f3f2ff;
+    background-image: url("siteResources/ecailles_@2X.png");
+    background-color: "#f3f2ff";
 }
-
-
-#left {
-    height: 640px;
-    float: left;
-    border: 1px solid #c1bcce;
-    background-color: #cbc7d4;
-    padding-left: 20px;
-    padding-right: 20px;
-    text-align: center;
-}
-
-
-#right {   
-    height: 640px;
-    float: right;
-    border: 1px solid #c1bcce;
-    background-color: #cbc7d4;  
-    padding-left: 20px;
-    padding-right: 20px; 
-}
-
 
 #footer {
     clear: both;
     position: relative;
-    padding-top: 20px;  
+    padding-top: 40px;  
     background-color: #cbc7d4;
     text-align: center;
     text-decoration: none;      
