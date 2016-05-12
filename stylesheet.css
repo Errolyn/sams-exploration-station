@@ -29,18 +29,18 @@
 
 #links { 
     background-color: #6B238E;
-    border-radius: 3px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
     text-decoration: none;
     color: white;
-    padding: 4px;
+    padding: 5px;
     font-family: "Arial";
+    font-size: 20px;
     box-shadow: 11px 9px 37px -8px rgba(0,0,0,0.75);
 }
 
 #navBar {
     text-align: center;
-    color: #6B238E;
-    font-size: 20px;
     padding: 5px;
 }
 
