@@ -42,6 +42,7 @@
 #navBar {
     text-align: center;
     padding: 5px;
+    padding-bottom: 35px;
 }
 
 #body {
@@ -53,6 +54,12 @@
 
 p {
     padding-top: 20px;
+}
+
+h3{
+    padding-right: 90px;
+    padding-left: 90px;
+     
 }
 
 h4 {
