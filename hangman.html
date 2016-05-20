@@ -13,10 +13,14 @@
   <script type="text/javascript" src="jquery2.min.js"></script>
   <script type='text/javascript'>
 
-  var choice;
+  $(document).ready(function() {
+    $(".hangmanHide").hide()
+    ///console.log("Hidding stuff now");
+  });
 
+  var choice;
   randomWord();
-  
+
   function randomWord() {      
     var requestStr = 'http://randomword.setgetgo.com/get.php'
 
@@ -37,7 +41,7 @@
           hideHangMan();
           findLength();
           
-          $('.clickableLetter').click(findLetter);
+          $('.clickableLetter').click(findLetter)
           $('.clickableLetter').click(loserWin)
         });
   };
@@ -50,20 +54,13 @@
   var l = 0;
   var w = 0;
   var guessesLeft = 7;
-  
-  
-  $(function(){
-          
-    hideHangMan();
-  });
-  
-  
+  var playerChoice;
 
   function hideHangMan(){
     for (var hang = 1; hang < 8; ++hang){
-      $("#"+hang.toString()).hide('');
+      $("#"+hang.toString()).hide('')
     }
-  }
+  };
 
   function findLength(){
     
@@ -71,31 +68,31 @@
         var thisLetter = choice[i]
         var realWord = $("<span></span>")
         .addClass(thisLetter).append("_ ")
-        $('#underscore').append(realWord);
+        $('#underscore').append(realWord)
     }
   };
 
   function viewLetters(){
     for (var apple = 0; apple < letters.length; ++apple){
-      currentLetter = letters[apple]
+      currentLetter = letters[apple];
       $('#displayLetters').append($('<a href="#"></a>').addClass(currentLetter).addClass('clickableLetter').append(currentLetter + ' '))
     }
   };
 
   function findLetter(){
-    var letterClicked = $(this).text().trim();
-    $(this).hide('');
-    var poss = choice.match(letterClicked)  
-    var maybe = l
-    wrongLetterArray[maybe] = letterClicked
+    var letterClicked = $(this).text().trim()
+    $(this).hide('')
+    var poss = choice.match(letterClicked);  
+    var maybe = l;
+    wrongLetterArray[maybe] = letterClicked;
       
     
     
     if (poss){ 
       
-      $("#underscore ."+letterClicked).html(letterClicked);
+      $("#underscore ."+letterClicked).html(letterClicked)
       ///console.log(poss)
-      $("#guesses").html('Guesses '+((++w) + l).toString());
+      $("#guesses").html('Guesses '+((++w) + l).toString())
       ///alert(true);
       return true;
     }
@@ -103,12 +100,12 @@
     else{
       
       $('#allBadGuesses').html("Wrong Guesses = "+wrongLetterArray)
-      $('#lastGuesses').html('Last guess = '+letterClicked.toString());
-      $("#guesses").html("Total guesses = "+((++l) + w).toString());
+      $('#lastGuesses').html('Last guess = '+letterClicked.toString())
+      $("#guesses").html("Total guesses = "+((++l) + w).toString())
       $('#'+l.toString()).show()
       $('#'+(l-1).toString()).hide()
       ///console.log("l1 is = "+l);
-      $("#guesses2").html('Guesses Left = '+(--guessesLeft));
+      $("#guesses2").html('Guesses Left = '+(--guessesLeft))
       ///alert("You're Wrong");
     }
     ///console.log("this is l2 "+l)
@@ -118,12 +115,21 @@
   function loserWin(){
     if (l === 7){
       $('#underscore').html(choice)
-      alert("Game Over, You lose");
+      playerChoice = confirm("You lost :( Would you like to play again?");
+      playAgain();
     } 
     else if (choice === $("#underscore").text()){
-      alert("You Win!")
-    } 
+      playerChoice = confirm("You won! Would you like to play again?");
+      playAgain();
+    }
   };
+
+  var playAgain = (function(){
+    if (playerChoice === true){
+      window.location.reload()
+    }
+    else{}
+  });
 
   </script>
   </head>
@@ -156,7 +162,7 @@
                 ||    
                ||   
   ================] </pre>
-  <pre id= '1'>  
+  <pre id= '1' class= "hangmanHide">  
      =O==========+    
       |         ||    
                 ||    
@@ -167,7 +173,7 @@
                 ||    
                ||   
   ================] </pre>
-  <pre id= '2'> 
+  <pre id= '2' class= "hangmanHide"> 
      =O==========+    
       |         ||    
       |         ||    
@@ -178,7 +184,7 @@
                 ||    
                ||   
   ================] </pre>
-  <pre id= '3'>
+  <pre id= '3' class= "hangmanHide">
      =O==========+    
       |         ||    
       |         ||    
@@ -189,7 +195,7 @@
                 ||    
                ||   
   ================] </pre>
-  <pre id= '4'>
+  <pre id= '4' class= "hangmanHide">
      =O==========+    
       |         ||    
       |         ||    
@@ -200,7 +206,7 @@
                 ||    
                ||   
   ================] </pre>
-  <pre id= '5'>
+  <pre id= '5' class= "hangmanHide">
      =O==========+    
       |         ||    
       |         ||    
@@ -211,7 +217,7 @@
                 ||    
                ||   
   ================] </pre>
-  <pre id= '6'>
+  <pre id= '6' class= "hangmanHide">
      =O==========+    
       |         ||    
       |         ||    
@@ -222,7 +228,7 @@
                 ||    
                ||   
   ================] </pre>
-  <pre id= '7'>
+  <pre id= '7' class= "hangmanHide">
      =O==========+    
       |         ||    
       |         ||    
