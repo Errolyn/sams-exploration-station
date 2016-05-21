@@ -10,7 +10,7 @@
     height: 160px;
     text-align: center;
     color: white;
-    float: top;
+    
     box-shadow: 11px 9px 37px -8px rgba(0,0,0,0.75);   
 }
 
@@ -43,6 +43,7 @@
     text-align: center;
     padding: 5px;
     padding-bottom: 35px;
+
 }
 
 #body {
@@ -77,9 +78,10 @@ pre {
     display: block;
     font-family: monospace;
     white-space: pre;
-    margin: 1em 0;
+    margin: 0.5em 0px;
     font-size: 30px;
     text-align: center;
+
 }
 
 #box {
@@ -97,10 +99,41 @@ pre {
     padding: 10px;
 }
 
+#newGameText:hover {
+    font-size: 175%;
+}
+
+#newGame {
+    text-align: center;
+    padding: 45px;
+    margin: 0 auto;  
+}
+
+#newGameText {
+
+    background-color: #6B238E;
+    text-decoration: none;
+    border-radius: 25px;
+    color: white;
+    padding: 8px;
+    font-family: "Arial";
+    font-size: 20px;
+    box-shadow: inset 2px 2px 39px 1px rgba(26,1,26,1);
+
+}
+
 #displayLetters {
     text-align: center;
     text-decoration:none;
     font-size: 25px;
+}
+
+.clickableLetter:hover {
+    font-size: 140%;
+}
+
+.clickableLetter {
+    text-decoration:none;
 }
 
 #underscore {

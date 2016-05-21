@@ -128,10 +128,29 @@
     if (playerChoice === true){
       window.location.reload()
     }
-    else{}
+    else{
+      $(".clickableLetter").hide();
+      $('#7').hide();
+
+    }
   });
+  
+ 
+  function reset(){
+    playerChoice = confirm("Would you like to start a new game?");
+    playAgain();
+    $(".clickableLetter").show();
+  };
+  
+  ///var refresh = (function(){
+    ///playerChoice = confirm("Would you like to start a new game?");
+    ///playAgain();
+  ///});
 
   </script>
+
+
+
   </head>
 <body>
 
@@ -141,17 +160,17 @@
         
   </div>     
     
-    <div id="navBar"> 
+  <div id="navBar"> 
     <a id="links" href="home.html">About Me</a>
     <a id="links" href="hangman.html"> Hang Man</a>
     <a id="links" href="russian_roulette.html"> Russian Roulette</a>
     <a id="links" href="clicker.html"> Clicker Counter</a>
     <a id="links" href="short_stories.html">Short Stories</a>
-   </div>
+  </div>
    <div id='lettersClick'></div>
-   <div id= 'displayLetters'></div>
-
-  <pre id= '0'>  
+   <div id='displayLetters'></div>
+   
+  <pre id= '0'>
      =O==========+    
                 ||    
                 ||    
@@ -160,9 +179,9 @@
                 ||    
                 ||    
                 ||    
-               ||   
+                ||    
   ================] </pre>
-  <pre id= '1' class= "hangmanHide">  
+  <pre id= '1' class= "hangmanHide">
      =O==========+    
       |         ||    
                 ||    
@@ -171,9 +190,9 @@
                 ||    
                 ||    
                 ||    
-               ||   
+                ||    
   ================] </pre>
-  <pre id= '2' class= "hangmanHide"> 
+  <pre id= '2' class= "hangmanHide">
      =O==========+    
       |         ||    
       |         ||    
@@ -182,7 +201,7 @@
                 ||    
                 ||    
                 ||    
-               ||   
+                ||    
   ================] </pre>
   <pre id= '3' class= "hangmanHide">
      =O==========+    
@@ -193,7 +212,7 @@
                 ||    
                 ||    
                 ||    
-               ||   
+                ||    
   ================] </pre>
   <pre id= '4' class= "hangmanHide">
      =O==========+    
@@ -204,7 +223,7 @@
                 ||    
                 ||    
                 ||    
-               ||   
+                ||    
   ================] </pre>
   <pre id= '5' class= "hangmanHide">
      =O==========+    
@@ -215,7 +234,7 @@
      /T\        ||    
                 ||    
                 ||    
-               ||   
+                ||    
   ================] </pre>
   <pre id= '6' class= "hangmanHide">
      =O==========+    
@@ -226,7 +245,7 @@
      /T\        ||    
       M         ||    
                 ||    
-               ||   
+                ||    
   ================] </pre>
   <pre id= '7' class= "hangmanHide">
      =O==========+    
@@ -237,15 +256,18 @@
      /T\        ||    
       M         ||    
      J L        ||    
-               ||   
+                ||    
   ================]</pre>
   <div id='underscore'></div>
-  
+  <div id="newGame">
+    <button type="reset" id="newGameText" onclick="reset();">New Game</button>
+  </div>
   <div id="box">
     <div class="box" id='guesses'></div>
     <div class="box" id='guesses2'></div>
     <div class="box" id="lastGuesses"></div>
     <div class="box" id='allBadGuesses'></div>
   </div>
+  
 </body>
 </html>
