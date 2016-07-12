@@ -39,6 +39,7 @@
     box-shadow: 11px 9px 37px -8px rgba(0,0,0,0.75);
 }
 
+
 #navBar {
     text-align: center;
     padding: 5px;
@@ -82,6 +83,27 @@ pre {
     font-size: 30px;
     text-align: center;
 
+}
+
+form {
+    text-align: center;
+    font-size: x-large;
+    font-family: "Arial";
+}
+
+input {
+    font-size: large;
+    text-align: center;
+    font-family: "Arial";
+}
+
+.lookup {
+    text-align: center;
+    font-size: large;
+}
+
+#userInput:focus {
+    color: black;
 }
 
 #box {
@@ -146,4 +168,8 @@ pre {
     position: relative;
     text-align: center;
     text-decoration: none;      
+}
+
+#userInput {
+    color: #d2d2e0;
 }
