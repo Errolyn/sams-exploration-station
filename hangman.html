@@ -29,8 +29,9 @@
     randomWordComplete();
   };
 
-  function randomWordComplete(data) {
-        choice = data.Word;
+  function randomWordComplete(data) {        
+        rawData = data.Word;
+        choice = rawData.toLowerCase();
         ///console.log("this is choice " + choice);
         $(function(){
           viewLetters();
@@ -46,7 +47,7 @@
   
   var letters = 'abcdefghijklmnopqrstuvwxyz'
   var wrongLetterArray = new Array();
-  var Word = "a";
+  var Word;
   var l = 0;
   var w = 0;
   var guessesLeft = 7;
@@ -69,8 +70,8 @@
   };
 
   function viewLetters(){
-    for (var apple = 0; apple < letters.length; ++apple){
-      currentLetter = letters[apple];
+    for (var letterIteration = 0; letterIteration < letters.length; ++letterIteration){
+      currentLetter = letters[letterIteration];
       $('#displayLetters').append($('<a href="#"></a>').addClass(currentLetter).addClass('clickableLetter').append(currentLetter + ' '))
     }
   };
@@ -79,8 +80,7 @@
     var letterClicked = $(this).text().trim()
     $(this).hide('')
     var poss = choice.match(letterClicked);  
-    var maybe = l;
-    wrongLetterArray[maybe] = letterClicked;
+    wrongLetterArray[l] = " " + letterClicked.toUpperCase();
       
     
     
@@ -88,7 +88,7 @@
       
       $("#underscore ."+letterClicked).html(letterClicked)
       ///console.log(poss)
-      $("#guesses").html('Guesses '+((++w) + l).toString())
+      $("#guesses").html('Total guesses = '+((++w) + l).toString())
       ///alert(true);
       return true;
     }
