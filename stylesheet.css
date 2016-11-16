@@ -71,7 +71,7 @@ h4 {
 }
 
 body {
-    background-image: url("siteResources/ecailles_@2X.png");
+    background-image: url("siteResources/paper_fibers_@2X.png");
     background-color: "#f3f2ff";
 }
 
@@ -99,7 +99,7 @@ input {
 
 .lookup {
     text-align: center;
-    font-size: large;
+    font-family: "Arial";
 }
 
 #userInput:focus {
@@ -172,4 +172,12 @@ input {
 
 #userInput {
     color: #d2d2e0;
+}
+
+#lookupTitle {
+    font-size: 30px;
+}
+
+#lookupBody {
+    font-size: 25px;
 }
