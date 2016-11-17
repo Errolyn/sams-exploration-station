@@ -42,11 +42,14 @@
     				}, 
 				    success: function(data){
 				    	console.log('succes: '+data);
-		    		    var jsonObj = data["definitions"][defPosition]["definition"];
-		    		    var jsonString = jsonObj.capitalizeFirstLetter();
-		    		    console.log(jsonString);
-		    		    console.log(div);
-		    		    div = $("<div class='lookup' id='lookupBody'>").html(jsonString + ".");
+		    		    var jsonObjString = data["definitions"][defPosition]["definition"];
+		    		    var jsonString = jsonObjString.capitalizeFirstLetter();
+		    		    var jsonObjType = data["definitions"][defPosition]["partOfSpeech"];
+		    		    var jsonType = jsonObjType.capitalizeFirstLetter();
+
+		    		    //console.log(jsonString);
+		    		    //console.log(div);
+		    		    div = $("<div class='lookup' id='lookupBody'>").html(jsonString + "." + " (" + jsonType + ")");
 						$("body").append(div);
 			        },
 
