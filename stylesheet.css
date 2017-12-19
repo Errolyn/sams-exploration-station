@@ -120,9 +120,15 @@ input {
     color: white;
     padding: 10px;
 }
+#hint {
+    position: relative;
+    text-align: center;
+    font-size: 25px;
 
-#newGameText:hover {
-    font-size: 175%;
+}
+
+#newGameHint:hover {
+    font-size: 130%;
 }
 
 #newGame {
@@ -131,7 +137,7 @@ input {
     margin: 0 auto;  
 }
 
-#newGameText {
+#newGameHint {
 
     background-color: #6B238E;
     text-decoration: none;
