@@ -151,6 +151,7 @@ input {
 }
 
 #displayLetters {
+    color:#6B238E;
     text-align: center;
     text-decoration:none;
     font-size: 25px;
