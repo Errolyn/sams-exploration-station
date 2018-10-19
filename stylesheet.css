@@ -56,9 +56,19 @@
 
 p {
     padding-top: 20px;
+    max-width: 800px;
+    text-align: justify;
+    margin: auto;
+}
+
+h2{
+    text-align: center;
+    margin: auto;
 }
 
 h3{
+    text-align: center;
+    margin: auto;
     padding-right: 90px;
     padding-left: 90px;
      
