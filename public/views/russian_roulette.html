@@ -1,0 +1,73 @@
+<html>
+<head>
+<link rel="icon" href="siteResources/Fishy.png">
+<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+<script type="text/javascript" src="newrelicSnippet.js"></script>
+<script type='text/javascript'>
+var min = 1;
+var max = 8;
+var i = randomNumber();
+var b = randomNumber();
+$(function(){
+    $('#spin').click(deadOrAlive);
+    $('#bullet').click(restart);	
+});
+function randomNumber(){  
+	console.log('randomNumber');
+    return Math.floor(Math.random() * (max - min + 1)) + min;  
+};  
+function deadOrAlive(){
+	console.group('deadOrAlive');
+	i = randomNumber();
+	console.log("this is i "+i); 
+	console.log("this is b "+b);
+	if (i === b){
+		$('#death').html('Bang! Your Dead!');
+		$('#fire').html("It's not your lucky day");
+		$('#bullet').html('Another life is granted, Play again?')
+		$("#spin").html('');
+	} else {
+		$('#fire').html('Click! You live to see another day.');
+		$('#spin').html('Try again?')
+		$('#death').html('');
+		$('#bullet').html('');
+	}
+	console.groupEnd('deadOrAlive');
+}
+	
+function restart(){
+	b = randomNumber();
+	deadOrAlive();
+}
+</script>
+</head>
+<body>
+  <div id="header">
+    <h1 id= 'title'> Russian Roulette</h1>
+    <a id="email" href="mailto:sam@fishy.ninja">sam@fishy.ninja</a>
+        
+  </div>     
+    
+  <div id="navBar"> 
+    <a id="links" href="home.html">About Me</a>
+    <a id="links" href="hangman.html"> Hangman</a>
+    <a id="links" href="russian_roulette.html"> Russian Roulette</a>
+    <a id="links" href="clicker.html"> Clicker Counter</a>
+    <a id="links" href="short_stories.html">Short Stories</a>
+    <a id="links" href="wordlookup.html">Word lookup</a>    
+  </div>	
+
+<div id='intro'> Will you live? Or will you die?
+</div>
+<div id='fire'> 
+</div>
+<a id='spin' href='#'>Feeling lucky?
+</a>
+
+<div id='death'>
+</div>
+<a id="bullet" href='#'>
+</a>
+</body>
+</html>
