@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <link rel="icon" href="siteResources/Fishy.png">
+    <link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+    <script type='text/javascript'>
+      var i = -1;
+      $(function(){
+        $('#psst').click(changeText);
+        $('#psst').click(countClick);
+        $('#takeItBack').click(stepBack);
+        $('#counting').html(i.toString());
+        setWai();
+      });
+      function changeText(){
+        $('#thing').html('Wooh!');
+      }
+      function countClick(){
+        $('#counting').html((++i).toString());
+        setWai();
+      }
+      function setWai(){
+        if (i % 2 == 0){
+          $('#wai').html('even');
+        } else {
+          $('#wai').html('odd');
+        }
+      }
+      function stepBack(){
+        $('#counting').html((--i).toString());
+        setWai();
+      }
+    </script>
+  </head>
+  <body>
+    <script type="text/javascript">
+      $( "h1.pageHeader" ).text("Clicker")
+    </script>
+
+    <div  id="thing">hi</div>
+    <a id="psst" href="#">Up</a>
+    <div id="counting"></div>
+    <div id="wai"></div>
+    <a id="takeItBack" href="#">Down</a>
+
+  </body>
+</html>
