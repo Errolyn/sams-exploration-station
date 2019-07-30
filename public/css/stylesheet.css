@@ -1,0 +1,200 @@
+* {
+  margin: 0;
+  font-family: "Verduna"  
+}
+
+
+#header {
+    background-image: url("/images/dataRain.png");
+    background-color: #6B238E;
+    height: 160px;
+    text-align: center;
+    color: white;
+    
+    box-shadow: 11px 9px 37px -8px rgba(0,0,0,0.75);   
+}
+
+#email {
+    font-size: 18px;
+    padding-top: -20px;
+    color: white;
+}
+
+#title {
+    font-size: 45px;
+    font-family: "Arial";
+    padding-top: 40px;
+}
+
+
+#links { 
+    background-color: #6B238E;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    font-family: "Arial";
+    font-size: 20px;
+    box-shadow: 11px 9px 37px -8px rgba(0,0,0,0.75);
+}
+
+
+#navBar {
+    text-align: center;
+    padding: 5px;
+    padding-bottom: 35px;
+
+}
+
+#body {
+    text-align: justify;
+    padding-right: 90px;
+    padding-left: 90px;
+    padding-bottom: 20px;
+}
+
+#body p {
+    padding-top: 20px;
+    max-width: 800px;
+    text-align: justify;
+    margin: auto;
+}
+
+h2{
+    text-align: center;
+    margin: auto;
+}
+
+h3{
+    text-align: center;
+    margin: auto;
+    padding-right: 90px;
+    padding-left: 90px;
+     
+}
+
+h4 {
+    text-decoration: underline;
+    font-family: cursive;
+    color: #4f4990;
+}
+
+body {
+    background-image: url("/images/paper_fibers_@2X.png");
+    background-color: "#f3f2ff";
+}
+
+pre {
+    display: block;
+    font-family: monospace;
+    white-space: pre;
+    margin: 0.5em 0px;
+    font-size: 30px;
+    text-align: center;
+
+}
+
+form {
+    text-align: center;
+    font-size: x-large;
+    font-family: "Arial";
+}
+
+input {
+    font-size: large;
+    text-align: center;
+    font-family: "Arial";
+}
+
+.lookup {
+    text-align: center;
+    font-family: "Arial";
+}
+
+#userInput:focus {
+    color: black;
+}
+
+#box {
+    
+    position: absolute;
+    float: left;
+    background-color: #6B238E;
+    left: 30px;
+    top: 290px;
+    border-radius: 5px;
+    box-shadow: inset 11px 10px 33px -14px rgba(64,3,64,0.93);
+    width: 160px;
+    height: 90px;
+    color: white;
+    padding: 10px;
+}
+#hint {
+    position: relative;
+    text-align: center;
+    font-size: 25px;
+
+}
+
+#newGameHint:hover {
+    font-size: 130%;
+}
+
+#newGame {
+    text-align: center;
+    padding: 45px;
+    margin: 0 auto;  
+}
+
+#newGameHint {
+
+    background-color: #6B238E;
+    text-decoration: none;
+    border-radius: 25px;
+    color: white;
+    padding: 8px;
+    font-family: "Arial";
+    font-size: 20px;
+    box-shadow: inset 2px 2px 39px 1px rgba(26,1,26,1);
+
+}
+
+#displayLetters {
+    color:#6B238E;
+    text-align: center;
+    text-decoration:none;
+    font-size: 25px;
+}
+
+.clickableLetter:hover {
+    font-size: 140%;
+}
+
+.clickableLetter {
+    text-decoration:none;
+}
+
+#underscore {
+    text-align: center;
+    text-decoration:none;
+    font-size: 40px;
+}
+
+#footer {
+    position: relative;
+    text-align: center;
+    text-decoration: none;      
+}
+
+#userInput {
+    color: #d2d2e0;
+}
+
+#lookupTitle {
+    font-size: 30px;
+}
+
+#lookupBody {
+    font-size: 25px;
+}
