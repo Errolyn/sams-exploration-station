@@ -11,7 +11,7 @@
     			div = $("<div class='lookup' id='lookupTitle'>").html(userWord.capitalizeFirstLetter() + ":");
 				$("body").append(div);
 				$("body").append("<br class='lookup'>"); 
-				var requestStr = "https://wordsapiv1.p.mashape.com/words/" + userWord + "/definitions"
+				var requestStr = "https://wordsapiv1.p.rapidapi.com/words/" + userWord + "/definitions"
 				var data = "";
 				var defPosition = 0
 				$.ajax({
@@ -19,7 +19,7 @@
 					url: requestStr,
 					
 					beforeSend: function(request){
-						request.setRequestHeader("X-Mashape-Key", "qnCxRAw0KVmshacikY5O3PbQYsxpp15DIuqjsnzG5JAiD2iYcl");
+						request.setRequestHeader("X-rapidapi-Key", "qnCxRAw0KVmshacikY5O3PbQYsxpp15DIuqjsnzG5JAiD2iYcl");
 						request.setRequestHeader("Accept", "application/json");
 					},
 					dataType: "JSON",
