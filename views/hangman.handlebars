@@ -12,7 +12,7 @@
       $(".hint").hide();
     });
     var choice;
-    
+    console.log(process.env);
     randomWord(1);
     function randomWord(x) {      
       var requestStr = 'https://wordsapiv1.p.rapidapi.com/words/?letterPattern=^[a-zA-Z]*$&random=true'
