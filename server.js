@@ -1,7 +1,10 @@
 var express = require('express');
 var exphbs  = require('express-handlebars');
- 
+
 var app = express();
+const { rapidapi } = require('./config');
+
+console.log(rapidapi);
  
 app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
