@@ -2,7 +2,6 @@
   <head>
     <script type="text/javascript">
       $( "h1.pageHeader" ).text("Hangman")
-
     </script>
 
     <script type='text/javascript'>
@@ -12,7 +11,6 @@
       $(".hint").hide();
     });
     var choice;
-    console.log(process.env);
     randomWord(1);
     function randomWord(x) {      
       var requestStr = 'https://wordsapiv1.p.rapidapi.com/words/?letterPattern=^[a-zA-Z]*$&random=true'
@@ -20,7 +18,7 @@
         type: "GET",
         url: requestStr,
         beforeSend: function(request){
-              request.setRequestHeader("X-Rapidapi-Key", "qnCxRAw0KVmshacikY5O3PbQYsxpp15DIuqjsnzG5JAiD2iYcl");
+              request.setRequestHeader("X-rapidapi-Key", "qnCxRAw0KVmshacikY5O3PbQYsxpp15DIuqjsnzG5JAiD2iYcl");
               request.setRequestHeader("Accept", "application/json");
             },
         dataType: "JSON",
