@@ -33,8 +33,7 @@ app.get('/wordlookup', function (req, res) {
     res.render('wordlookup');
 });
 
-
-var server = app.listen(8081, function(){
+var server = app.listen(process.env.PORT || 4000, function(){
     var port = server.address().port;
     console.log("Server started at http://localhost:%s", port);
 });
